@@ -3,7 +3,7 @@ h5py==2.10.0
 joblib==0.14.1
 matplotlib==3.1.3
 numpy==1.18.1
-Pillow==7.0.0
+Pillow==8.2.0
 plyfile==0.7.2
 scipy==1.4.1
 tensorboardX==2.0
