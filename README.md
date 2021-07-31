@@ -44,7 +44,7 @@ TBA.
   $ cd dataset
   $ python json2pc.py --only_test
   ```
-The data we used are parsed from Onshape public documents with links from [ABC dataset](https://archive.nyu.edu/handle/2451/61215). We also release our parsing scripts [here (TBA)]() for anyone who are interested in parsing their own data.
+The data we used are parsed from Onshape public documents with links from [ABC dataset](https://archive.nyu.edu/handle/2451/61215). We also release our parsing scripts [here](https://github.com/ChrisWu1997/onshape-cad-parser) for anyone who are interested in parsing their own data.
 
 
 ## Training
