@@ -11,6 +11,8 @@ ICCV 2021 (camera ready version coming soon)
   <img src='teaser.png' width=600>
 </p>
 
+We also release the Onshape CAD data parsing scripts here: [onshape-cad-parser](https://github.com/ChrisWu1997/onshape-cad-parser).
+
 ## Prerequisites
 
 - Linux
