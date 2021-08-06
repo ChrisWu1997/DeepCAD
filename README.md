@@ -35,7 +35,7 @@ $ conda install -c conda-forge pythonocc-core=7.5.1
 
 ## Data
 
-Download data from [here](https://drive.google.com/drive/folders/1mSJBZjKC-Z5I7pLPTgb4b5ZP-Y6itvGG?usp=sharing) and extract them under `data` folder. 
+Download data from [here](http://www.cs.columbia.edu/cg/deepcad/data.tar) ([backup](https://drive.google.com/drive/folders/1mSJBZjKC-Z5I7pLPTgb4b5ZP-Y6itvGG?usp=sharing)) and extract them under `data` folder. 
 - `cad_json` contains the original json files that we parsed from Onshape and each file describes a CAD construction sequence. 
 - `cad_vec` contains our vectorized representation for CAD sequences, which serves for fast data loading. They can also be obtained using `dataset/json2vec.py`.
 TBA.
@@ -114,7 +114,7 @@ The trained models and experment logs will be saved in `proj_log/newDeepCAD/` by
 
 ## Pre-trained models
 
-Download pretrained model from [here](https://drive.google.com/file/d/16RzOChCdLM5L1VUSFpgHwqU7JoQOF2Nd/view?usp=sharing) and extract it under `proj_log`. All testing commands shall be able to excecuted directly, by specifying `--exp_name=pretrained` when needed.
+Download pretrained model from [here](http://www.cs.columbia.edu/cg/deepcad/pretrained.tar) ([backup](https://drive.google.com/file/d/16RzOChCdLM5L1VUSFpgHwqU7JoQOF2Nd/view?usp=sharing)) and extract it under `proj_log`. All testing commands shall be able to excecuted directly, by specifying `--exp_name=pretrained` when needed.
 
 
 ## Visualization and Export
@@ -133,12 +133,10 @@ We would like to thank and acknowledge referenced codes from [DeepSVG](https://g
 
 Please cite our work if you find it useful:
 ```
-@misc{wu2021deepcad,
-      title={DeepCAD: A Deep Generative Network for Computer-Aided Design Models}, 
-      author={Rundi Wu and Chang Xiao and Changxi Zheng},
-      year={2021},
-      eprint={2105.09492},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{wu2021deepcad,
+title={Deepcad: A deep generative network for computer-aided design models},
+author={Wu, Rundi and Xiao, Chang and Zheng, Changxi},
+journal={arXiv preprint arXiv:2105.09492},
+year={2021}
 }
 ```
