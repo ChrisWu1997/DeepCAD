@@ -135,10 +135,11 @@ We would like to thank and acknowledge referenced codes from [DeepSVG](https://g
 
 Please cite our work if you find it useful:
 ```
-@article{wu2021deepcad,
-title={Deepcad: A deep generative network for computer-aided design models},
-author={Wu, Rundi and Xiao, Chang and Zheng, Changxi},
-journal={arXiv preprint arXiv:2105.09492},
-year={2021}
+@InProceedings{wu2021deepcad,
+author = {Wu, Rundi and Xiao, Chang and Zheng, Changxi},
+title = {DeepCAD: A Deep Generative Network for Computer-Aided Design Models},
+booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+month = {October},
+year = {2021}
 }
 ```
