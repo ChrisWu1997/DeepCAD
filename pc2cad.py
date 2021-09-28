@@ -35,7 +35,9 @@ class Config(object):
 
     def __init__(self, args):
         self.data_root = os.path.join(args.proj_dir, args.exp_name, "results/all_zs_ckpt{}.h5".format(args.ae_ckpt))
-        self.exp_dir = os.path.join(args.proj_dir, args.exp_name, "pc2cad_tune")
+        self.pc_root = args.pc_root
+        self.split_path = args.split_path
+        self.exp_dir = os.path.join(args.proj_dir, args.exp_name, "pc2cad")
         self.log_dir = os.path.join(self.exp_dir, 'log')
         self.model_dir = os.path.join(self.exp_dir, 'model')
         self.gpu_ids = args.gpu_ids
@@ -140,11 +142,7 @@ class PointNet2(nn.Module):
 
 class TrainAgent(BaseTrainer):
     def build_net(self, config):
-        net = PointNet2()
-        if len(config.gpu_ids) > 1:
-            net = nn.DataParallel(net)
-        # net = EncoderPointNet()
-        return net
+        self.net = PointNet2().cuda()
 
     def set_loss_function(self):
         self.criterion = nn.MSELoss().cuda()
