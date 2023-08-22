@@ -217,10 +217,7 @@ class Profile(SketchBase):
         return Profile(all_loops)
 
     def __str__(self):
-        s = "Profile:"
-        for loop in self.children:
-            s += "\n    -" + str(loop)
-        return s
+        return "Profile:" + "\n    -".join([str(loop) for loop in self.children])
 
     @staticmethod
     def from_vector(vec, start_point=None, is_numerical=True):
