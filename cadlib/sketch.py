@@ -125,10 +125,7 @@ class Loop(SketchBase):
         return this_loop
 
     def __str__(self):
-        s = "Loop:"
-        for curve in self.children:
-            s += "\n      -" + str(curve)
-        return s
+        return "Loop:" + "\n      -" + "\n      -".join([str(curve) for curve in self.children])
 
     @staticmethod
     def from_vector(vec, start_point=None, is_numerical=True):
