@@ -125,10 +125,7 @@ class Loop(SketchBase):
         return this_loop
 
     def __str__(self):
-        s = "Loop:"
-        for curve in self.children:
-            s += "\n      -" + str(curve)
-        return s
+        return "Loop:" + "\n      -" + "\n      -".join([str(curve) for curve in self.children])
 
     @staticmethod
     def from_vector(vec, start_point=None, is_numerical=True):
@@ -220,10 +217,7 @@ class Profile(SketchBase):
         return Profile(all_loops)
 
     def __str__(self):
-        s = "Profile:"
-        for loop in self.children:
-            s += "\n    -" + str(loop)
-        return s
+        return "Profile:" + "\n    -".join([str(loop) for loop in self.children])
 
     @staticmethod
     def from_vector(vec, start_point=None, is_numerical=True):

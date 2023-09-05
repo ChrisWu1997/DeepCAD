@@ -258,10 +258,7 @@ class CADSequence(object):
         return cad_seq
 
     def __str__(self):
-        res = ""
-        for i, ext in enumerate(self.seq):
-            res += "({})".format(i) + str(ext) + "\n"
-        return res
+        return  "" + "\n".join(["({})".format(i) + str(ext) for i, ext in enumerate(self.seq)])
 
     def to_vector(self, max_n_ext=10, max_n_loops=6, max_len_loop=15, max_total_len=60, pad=False):
         if len(self.seq) > max_n_ext:
