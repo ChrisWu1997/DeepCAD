@@ -1,0 +1,14 @@
+name: deepcadenv
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - nodefaults
+dependencies:
+  - python=3.10.*  # or don't specify the version and use the latest stable Python
+  - mamba
+  - pip  # pip must be mentioned explicitly, or conda-lock will fail
+  - poetry=1.*
+  - pytorch::pytorch=2.1.*
+  - nvidia::pytorch-cuda=10.1
+  - conda-forge::pythonocc-core=7.7.2  # Add this lineq
