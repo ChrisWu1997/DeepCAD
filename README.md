@@ -13,25 +13,28 @@ ICCV 2021 (camera ready version coming soon)
 
 We also release the Onshape CAD data parsing scripts here: [onshape-cad-parser](https://github.com/ChrisWu1997/onshape-cad-parser).
 
-## Prerequisites
+## Setup
+
+### Platform Requirements
 
 - Linux
 - NVIDIA GPU + CUDA CuDNN
-- Python 3.7, PyTorch 1.5+
+- Python 3.10, PyTorch 2.1+
 
+### Dependencies
 
-## Dependencies
+Conda is used for environment management and Poetry is used for dependency and package management. There is a specific package, [pythonocc-core](https://github.com/tpaviot/pythonocc-core), which is easiest to install with Conda, hence the setup here.
 
-Install python package dependencies through pip:
+### Install
 
-```bash
-$ pip install -r requirements.txt
-```
-
-Install [pythonocc](https://github.com/tpaviot/pythonocc-core) (OpenCASCADE) by conda:
+The `deepcad` python package should be installed as follows:
 
 ```bash
-$ conda install -c conda-forge pythonocc-core=7.5.1
+# This will create a conda environment `deepcadenv` with pythonocc-core installed
+conda env create -f environment.yml
+conda activate deepcadenv
+# Finally, we install the deepcad package and the rest of its dependencies with poetry
+poetry install
 ```
 
 
@@ -79,7 +82,7 @@ The trained models and experment logs will be saved in `proj_log/newDeepCAD/` by
   ```bash
   $ python test.py --exp_name newDeepCAD --mode rec --ckpt 1000 -g 0
   ```
-  The results will be saved in`proj_log/newDeepCAD/results/test_1000` by default in the format of `h5` (CAD sequence saved in vectorized representation).
+  The results will be saved in `proj_log/newDeepCAD/results/test_1000` by default in the format of `h5` (CAD sequence saved in vectorized representation).
 
   To evaluate the results:
 

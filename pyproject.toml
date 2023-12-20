@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "deepcad"
+version = "0.1.0"
+description = "Navier AIs fork of the DeepCAD library for generative CAD"
+authors = []
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+numpy = "<1.25"
+plotly = "^5.18.0"
+click = "^8.1.7"
+tqdm = "^4.66.1"
+wandb = "^0.16.1"
+cython = "^3.0.7"
+h5py = "^3.10.0"
+joblib = "^1.3.2"
+matplotlib = "^3.8.2"
+tensorboardx = "^2.6.2.2"
+trimesh = "^4.0.7"
+scikit-learn = "^1.3.2"
+pillow = "^10.1.0"
+plyfile = "^1.0.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+ipykernel = "^6.27.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
